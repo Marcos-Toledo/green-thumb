@@ -1,7 +1,9 @@
-const btnScrollTop = document.querySelector('#gt-scroll-top');
-
-function scrollTop() {
-  window.scrollTo(0, 0);
+export const backToTop = {
+  scrollTop: function() {
+    window.scrollTo(0, 0);
+  },
+  init: function() {
+    const btnScrollTop = document.querySelector('#gt-scroll-top');
+    btnScrollTop.addEventListener('click', this.scrollTop);
+  }
 }
-
-btnScrollTop.addEventListener('click', scrollTop);

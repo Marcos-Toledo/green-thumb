@@ -1,40 +1,43 @@
 const itens = document.querySelectorAll('.gt-select li');
 const labels = document.querySelectorAll('.open-select');
 
-function openSelect() {
-  this.closest('.gt-select').classList.add('open');
-}
+export const select = {
+  openSelect: function() {
+    this.closest('.gt-select').classList.add('open');
+  },
 
-labels.forEach(item => {
-  item.addEventListener('click', openSelect);
-});
-
-function deselect(parentNode) {
-  const li = parentNode.querySelectorAll('li');
-
-  li.forEach(item => item.classList.remove('selected'));
-}
-
-itens.forEach(item => {
-  item.addEventListener('click', function() {
-    let span = this.closest('.gt-select').firstElementChild
-    let ul = this.parentNode;
+  deselect: function(parentNode) {
+    const li = parentNode.querySelectorAll('li');
     
-    span.innerText = this.textContent;
+    li.forEach(item => item.classList.remove('selected'));
+  },
 
-    deselect(ul);
-    this.classList.add('selected');
-  });
-});
+  closeAllSelect: function(element) {
+    const selects = document.querySelectorAll('.gt-select')
+      
+    selects.forEach(item => {
+      if (!element.target.classList.contains('open-select')) {
+        item.classList.remove('open')
+      }
+    })
+  },
 
-function closeAllSelect(element) {
-  const selects = document.querySelectorAll('.gt-select')
-  
-  selects.forEach(item => {
-    if (!element.target.classList.contains('open-select')) {
-      item.classList.remove('open')
-    }
-  })
+  init: function() {labels.forEach(item => {
+      item.addEventListener('click', this.openSelect);
+    });
+    
+    itens.forEach(item => {
+      item.addEventListener('click', function(el) {
+        let span = el.target.closest('.gt-select').firstElementChild
+        let ul = el.target.parentNode;
+        
+        span.innerText = el.target.textContent;
+    
+        this.deselect(ul);
+        el.target.classList.add('selected');
+      }.bind(this));
+    });
+    
+    document.addEventListener('click', this.closeAllSelect);
+  }
 }
-
-document.addEventListener('click', closeAllSelect);
