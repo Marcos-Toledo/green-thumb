@@ -1,0 +1,45 @@
+.gt-filter {
+  padding: 3rem 0 3.4rem;
+  background-color: $white;
+
+  .container {
+    display: flex;
+  }
+
+  [class^="gt-filter-"] {
+    max-width: 229px;
+
+    & + div[class^="gt-filter-"] {
+      margin-left: 6.4rem;
+    }
+  }
+
+  .gt-filter-sun {
+    padding-top: 0.6rem;
+    .gt-filter-item-label {
+      padding-top: 0.2rem;
+    }
+  }
+
+  .gt-filter-dog {
+    padding-top: 0.8rem;
+  }
+
+  .gt-filter-logo-sun,
+  .gt-filter-logo-dog {
+    width: 75px;
+  }
+
+  .gt-filter-logo-wateringcan {
+    width: 103px;
+  }
+
+  .gt-filter-item-label {
+    font-size: 0.8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 1.5rem;
+    line-height: 1.3rem;
+    word-spacing: -2px;
+    letter-spacing: 1px;
+  }
+}

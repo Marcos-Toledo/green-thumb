@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Front End Test - Greenthumb</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/index.scss" />
+  </head>
+
+  <body>
+    <header class="gt-header">
+      <div class="container">
+        <h1 class="gt-logo">
+          green thumb.
+        </h1>
+      </div>
+    </header>
+
+    <section class="gt-cover">
+      <div class="container">
+        <h2 class="gt-cover-title">
+          Find your next green friend
+          <img src="./assets/images/icons/arrow-down.svg" alt="Seta para baixo" class="gt-cover-title-arrowdown">
+        </h2>
+      </div>
+    </section>
+
+    <section class="gt-filter">
+      <div class="container">
+        <div class="gt-filter-sun">
+          <img src="./assets/images/illustrations/sun.png" alt="Ilustração do sol" class="gt-filter-logo-sun">
+          <p class="gt-filter-item-label"><strong>1.</strong> Set the amount of <strong>sunlight</strong> your plant will get.</p>
+          <div class="gt-select">
+            <span class="gt-select-text-selected open-select">Select...</span>
+            <ul class="gt-select-list">
+              <li data-value="sun">No</li>
+              <li data-value="sun">Low</li>
+              <li data-value="sun">High</li>
+            </ul>
+          </div>
+        </div>
+        <div class="gt-filter-wateringcan">
+          <img src="./assets/images/illustrations/wateringcan.png" alt="Ilustração de um regador" class="gt-filter-logo-wateringcan">
+          <p class="gt-filter-item-label"><strong>2.</strong> How often do you want to <strong>water</strong> your plant?</p>
+          <div class="gt-select">
+            <span class="gt-select-text-selected open-select">Select...</span>
+            <ul class="gt-select-list">
+              <li data-value="water">Regularly</li>
+              <li data-value="water">Daily</li>
+              <li data-value="water">Rarely</li>
+            </ul>
+          </div>
+        </div>
+        <div class="gt-filter-dog">
+          <img src="./assets/images/illustrations/dog.png" alt="Ilustração de um cachorro" class="gt-filter-logo-dog">
+          <p class="gt-filter-item-label"><strong>3.</strong> Do you have pets? Do they <strong>chew</strong> plants?</p>
+          <div class="gt-select">
+            <span class="gt-select-text-selected open-select">Select...</span>
+            <ul class="gt-select-list">
+              <li data-value="chew">Yes</li>
+              <li data-value="chew">No</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="list-plants" class="gt-list-plants">
+      <div class="container">
+        <img src="./assets/images/illustrations/pick.png" alt="Ilustração pegando uma planta" class="gt-ilustrations-pick">
+        <h2 class="gt-list-plants-title">Our picks for you</h2>
+
+        <div id="grid-plants" class="gt-grid-plants">
+          <!-- <div class="gt-grid-plant gt-grid-plant-favorite">
+            <span class="gt-grid-plant-flag-favorite">
+              <img src="./assets/images/illustrations/staff-favorite.png" alt="">
+            </span>
+            <img src="./assets/images/plants/bunny-ears-cacti.jpg" alt="" class="gt-grid-plant-image">
+            <p class="gt-grid-plant-name">Bunny ears cacti</p>
+            <div class="gt-grid-plant-info">
+              <span class="gt-grid-plant-price">$25</span>
+              <ul class="gt-grid-plant-characteristics">
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+              </ul>
+            </div>
+          </div>
+          <div class="gt-grid-plant">
+            <span class="gt-grid-plant-flag-favorite">
+              <img src="./assets/images/illustrations/staff-favorite.png" alt="">
+            </span>
+            <img src="./assets/images/plants/succulent-bowl-large.jpg" alt="">
+            <p class="gt-grid-plant-name">Succulent bowl</p>
+            <div class="gt-grid-plant-info">
+              <span class="gt-grid-plant-price">$25</span>
+              <ul class="gt-grid-plant-characteristics">
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+              </ul>
+            </div>
+          </div>
+          <div class="gt-grid-plant">
+            <span class="gt-grid-plant-flag-favorite">
+              <img src="./assets/images/illustrations/staff-favorite.png" alt="">
+            </span>
+            <img src="./assets/images/plants/succulent-bowl-large.jpg" alt="">
+            <p class="gt-grid-plant-name">Succulent bowl</p>
+            <div class="gt-grid-plant-info">
+              <span class="gt-grid-plant-price">$25</span>
+              <ul class="gt-grid-plant-characteristics">
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+              </ul>
+            </div>
+          </div>
+          <div class="gt-grid-plant">
+            <span class="gt-grid-plant-flag-favorite">
+              <img src="./assets/images/illustrations/staff-favorite.png" alt="">
+            </span>
+            <img src="./assets/images/plants/succulent-bowl-large.jpg" alt="">
+            <p class="gt-grid-plant-name">Succulent bowl</p>
+            <div class="gt-grid-plant-info">
+              <span class="gt-grid-plant-price">$25</span>
+              <ul class="gt-grid-plant-characteristics">
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/low-sun.svg" alt=""></li>
+                <li><img src="./assets/images/icons/toxic.svg" alt=""></li>
+              </ul>
+            </div>
+          </div>
+          <div class="gt-grid-plant">
+            <span class="gt-grid-plant-flag-favorite">
+              <img src="./assets/images/illustrations/staff-favorite.png" alt="">
+            </span>
+            <img src="./assets/images/plants/succulent-bowl-large.jpg" alt="">
+            <p class="gt-grid-plant-name">Succulent bowl</p>
+            <div class="gt-grid-plant-info">
+              <span class="gt-grid-plant-price">$25</span>
+              <ul class="gt-grid-plant-characteristics">
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+              </ul>
+            </div>
+          </div>
+          <div class="gt-grid-plant">
+            <span class="gt-grid-plant-flag-favorite">
+              <img src="./assets/images/illustrations/staff-favorite.png" alt="">
+            </span>
+            <img src="./assets/images/plants/succulent-bowl-large.jpg" alt="">
+            <p class="gt-grid-plant-name">Succulent bowl</p>
+            <div class="gt-grid-plant-info">
+              <span class="gt-grid-plant-price">$25</span>
+              <ul class="gt-grid-plant-characteristics">
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+              </ul>
+            </div>
+          </div>
+          <div class="gt-grid-plant">
+            <span class="gt-grid-plant-flag-favorite">
+              <img src="./assets/images/illustrations/staff-favorite.png" alt="">
+            </span>
+            <img src="./assets/images/plants/succulent-bowl-large.jpg" alt="">
+            <p class="gt-grid-plant-name">Succulent bowl</p>
+            <div class="gt-grid-plant-info">
+              <span class="gt-grid-plant-price">$25</span>
+              <ul class="gt-grid-plant-characteristics">
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+              </ul>
+            </div>
+          </div>
+          <div class="gt-grid-plant">
+            <span class="gt-grid-plant-flag-favorite">
+              <img src="./assets/images/illustrations/staff-favorite.png" alt="">
+            </span>
+            <img src="./assets/images/plants/succulent-bowl-large.jpg" alt="">
+            <p class="gt-grid-plant-name">Succulent bowl</p>
+            <div class="gt-grid-plant-info">
+              <span class="gt-grid-plant-price">$25</span>
+              <ul class="gt-grid-plant-characteristics">
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+              </ul>
+            </div>
+          </div>
+          <div class="gt-grid-plant">
+            <span class="gt-grid-plant-flag-favorite">
+              <img src="./assets/images/illustrations/staff-favorite.png" alt="">
+            </span>
+            <img src="./assets/images/plants/succulent-bowl-large.jpg" alt="">
+            <p class="gt-grid-plant-name">Succulent bowl</p>
+            <div class="gt-grid-plant-info">
+              <span class="gt-grid-plant-price">$25</span>
+              <ul class="gt-grid-plant-characteristics">
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+                <li><img src="./assets/images/icons/pet.svg" alt=""></li>
+              </ul>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="container">
+          <a href="javascript:;" id="gt-scroll-top" class="gt-btn-block">
+            <img src="./assets/images/icons/arrow-up.svg" alt="" class="gt-btn-arrow gt-btn-arrow-right">
+            <span>back to the top</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="empty-state" class="gt-empty-result">
+      <div class="container">
+        <div class="gt-empty-result-container-text">
+          <h2 class="gt-empty-result-title">No results yet…</h2>
+          <p class="gt-empty-result-description">Use the filters above to find the plant that best fits your environment :)</p>
+        </div>
+        <img src="/assets/images/illustrations/no-results.png" alt="Ilustração de sem resultado">
+      </div>
+    </section>
+
+    <script src="./assets/javascripts/components/select.js"></script>
+    <script src="./assets/javascripts/components/scrollTop.js"></script>
+    <script src="./assets/javascripts/index.js"></script>
+  </body>
+</html>

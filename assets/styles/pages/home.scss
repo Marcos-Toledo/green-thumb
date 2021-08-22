@@ -1,0 +1,68 @@
+.gt-cover {
+  padding: 7.8rem 0 7.54rem;
+  background-color: $green-100;
+  background-image: url(../images/hero/desktop/left-leaves.png),
+    url(../images/hero/desktop/right-leaves.png),
+    url(../images/hero/desktop/plantperson.png);
+  background-position: 0% bottom, 100% bottom, 72.3% 49%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: contain, contain, 23%;
+}
+
+.gt-cover-title {
+  color: $white;
+  font-size: 4.5rem;
+  max-width: 420px;
+  line-height: 5.3rem;
+  letter-spacing: -1px;
+  word-spacing: -7px;
+  position: relative;
+
+  .gt-cover-title-arrowdown {
+    position: absolute;
+    bottom: -67px;
+    left: 3px;
+  }
+}
+
+.gt-empty-result {
+  color: $gray-350;
+  padding: 3.2rem 0 4.4rem;
+
+  .container {
+    display: flex;
+  }
+
+  .gt-empty-result-container-text {
+    max-width: 554px;
+  }
+
+  .gt-empty-result-title {
+    font-size: 2.7rem;
+    padding: 1.7rem 0 0.8rem;
+  }
+
+  .gt-empty-result-description {
+    padding-right: 20rem;
+    line-height: 1.7rem;
+  }
+}
+
+.gt-list-plants {
+  padding: 2.3rem 0 3.2rem;
+  display: none;
+
+  .gt-ilustrations-pick {
+    width: 156px;
+  }
+
+  .gt-list-plants-title {
+    color: $green-950;
+    font-size: 3.3rem;
+    padding: 1.2rem 0 3.2rem;
+  }
+}
+
+.gt-btn-block {
+  margin-top: 3.2rem;
+}
