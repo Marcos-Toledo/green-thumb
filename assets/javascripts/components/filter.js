@@ -1,12 +1,3 @@
-// import Pet from '../../images/icons/pet.svg';
-// import LowSun from '../../images/icons/low-sun.svg';
-// import NoSun from '../../images/icons/no-sun.svg';
-// import HighSun from '../../images/icons/high-sun.svg';
-// import Toxic from '../../images/icons/toxic.svg';
-// import OneDrop from '../../images/icons/1-drop.svg';
-// import TwoDrop from '../../images/icons/2-drops.svg';
-// import ThreeDrop from '../../images/icons/3-drops.svg';
-
 const gridPlants = document.querySelector('#grid-plants');
 const params = {
   sun: '',
