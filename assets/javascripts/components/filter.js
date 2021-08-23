@@ -1,11 +1,11 @@
-import Pet from '../../images/icons/pet.svg';
-import LowSun from '../../images/icons/low-sun.svg';
-import NoSun from '../../images/icons/no-sun.svg';
-import HighSun from '../../images/icons/high-sun.svg';
-import Toxic from '../../images/icons/toxic.svg';
-import OneDrop from '../../images/icons/1-drop.svg';
-import TwoDrop from '../../images/icons/2-drops.svg';
-import ThreeDrop from '../../images/icons/3-drops.svg';
+// import Pet from '../../images/icons/pet.svg';
+// import LowSun from '../../images/icons/low-sun.svg';
+// import NoSun from '../../images/icons/no-sun.svg';
+// import HighSun from '../../images/icons/high-sun.svg';
+// import Toxic from '../../images/icons/toxic.svg';
+// import OneDrop from '../../images/icons/1-drop.svg';
+// import TwoDrop from '../../images/icons/2-drops.svg';
+// import ThreeDrop from '../../images/icons/3-drops.svg';
 
 const gridPlants = document.querySelector('#grid-plants');
 const params = {
@@ -44,13 +44,13 @@ export const filter = {
         <div class="gt-grid-plant-info">
           <span class="gt-grid-plant-price">$${plant.price}</span>
           <ul class="gt-grid-plant-characteristics">
-            ${plant.sun == 'no' ? `<li><img src="${NoSun}" alt=""></li>`: ''}
-            ${plant.sun == 'low' ? `<li><img src="${LowSun}" alt=""></li>` : ''}
-            ${plant.sun == 'high' ? `<li><img src="${HighSun}" alt=""></li>` : ''}
-            ${plant.toxicity == true ? `<li><img src="${Toxic}" alt=""></li>` : `<li><img src="${Pet}" alt=""></li>`}
-            ${plant.water == 'rarely' ? `<li><img src="${OneDrop}" alt=""></li>` : ''}
-            ${plant.water == 'regularly' ? `<li><img src="${TwoDrop}" alt=""></li>` : ''}
-            ${plant.water == 'daily' ? `<li><img src="${ThreeDrop}" alt=""></li>` : ''}
+            ${plant.sun == 'no' ? `<li class="plant-icon-no-sun"></li>`: ''}
+            ${plant.sun == 'low' ? `<li class="plant-icon-low-sun"></li>` : ''}
+            ${plant.sun == 'high' ? `<li class="plant-icon-high-sun"></li>` : ''}
+            ${plant.toxicity == true ? `<li class="plant-icon-toxic"></li>` : `<li class="plant-icon-pet"></li>`}
+            ${plant.water == 'rarely' ? `<li class="plant-icon-one-drop"></li>` : ''}
+            ${plant.water == 'regularly' ? `<li class="plant-icon-two-drops"></li>` : ''}
+            ${plant.water == 'daily' ? `<li class="plant-icon-three-drops"></li>` : ''}
           </ul>
         </div>
       </div>

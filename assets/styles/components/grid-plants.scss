@@ -55,6 +55,40 @@
   }
 }
 
+[class^="plant-icon-"] {
+  width: 20px;
+  height: 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.plant-icon-pet {
+  background-image: url(../images/icons/pet.svg);
+}
+.plant-icon-low-sun {
+  background-image: url(../images/icons/low-sun.svg);
+}
+.plant-icon-no-sun {
+  background-image: url(../images/icons/no-sun.svg);
+}
+.plant-icon-high-sun {
+  background-image: url(../images/icons/high-sun.svg);
+}
+.plant-icon-toxic {
+  background-image: url(../images/icons/toxic.svg);
+}
+.plant-icon-one-drop {
+  background-image: url(../images/icons/1-drop.svg);
+}
+.plant-icon-two-drops {
+  background-image: url(../images/icons/2-drops.svg);
+}
+.plant-icon-three-drops {
+  width: 27px;
+  background-image: url(../images/icons/3-drops.svg);
+}
+
 .gt-grid-plant-favorite {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -104,10 +138,14 @@
 
   .gt-grid-plant-characteristics {
     padding-top: 0.9rem;
+  }
 
-    img {
-      width: 35px;
-      height: 35px;
-    }
+  [class^="plant-icon-"] {
+    width: 35px;
+    height: 35px;
+  }
+
+  .plant-icon-three-drops {
+    width: 45px;
   }
 }
