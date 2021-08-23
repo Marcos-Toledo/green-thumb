@@ -155,3 +155,63 @@
     width: 45px;
   }
 }
+
+@media (max-width: $tablet-width) {
+  .gt-grid-plants {
+    width: 100vh;
+    overflow-x: auto;
+    display: flex;
+  }
+
+  .gt-grid-plant {
+    min-width: 215px;
+    padding: 2.5rem 1.5rem 0.8rem;
+  }
+
+  .gt-grid-plant-favorite {
+    order: 0;
+
+    .gt-grid-plant-flag-favorite {
+      top: 20px;
+      left: 0;
+      width: 134px;
+      height: 34px;
+      background-position: 7px 6px;
+      background-size: 104px;
+    }
+
+    .gt-grid-plant-wrap-image {
+      min-height: 176px;
+    }
+
+    .gt-grid-plant-image {
+      max-width: 140px;
+    }
+
+    .gt-grid-plant-name {
+      float: none;
+      font-size: initial;
+      max-width: initial;
+      line-height: initial;
+    }
+
+    .gt-grid-plant-info {
+      flex-direction: initial;
+      align-items: flex-start;
+      padding: 0.4rem 0 0.6rem;
+    }
+
+    .gt-grid-plant-price {
+      font-size: 1rem;
+    }
+
+    .gt-grid-plant-characteristics {
+      padding-top: 0;
+    }
+
+    [class^="plant-icon-"] {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

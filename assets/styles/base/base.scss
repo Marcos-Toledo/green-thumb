@@ -14,14 +14,6 @@ a {
 
 html {
   scroll-behavior: smooth;
-
-  @media (max-width: 1080px) {
-    font-size: 93.75%;
-  }
-
-  @media (max-width: 720px) {
-    font-size: 87.5%;
-  }
 }
 
 body {
@@ -34,4 +26,21 @@ body {
 .container {
   max-width: 895px;
   margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: $desktop-width) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  html {
+    font-size: 87.5%;
+  }
+
+  .container {
+    padding: 0 2.3rem;
+  }
 }
