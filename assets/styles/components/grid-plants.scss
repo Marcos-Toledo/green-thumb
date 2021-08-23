@@ -64,29 +64,31 @@
 }
 
 .plant-icon-pet {
-  background-image: url(../images/icons/pet.svg);
+  background-image: url("../images/icons/pet.svg");
 }
 .plant-icon-low-sun {
-  background-image: url(../images/icons/low-sun.svg);
+  background-image: url("../images/icons/low-sun.svg");
 }
 .plant-icon-no-sun {
-  background-image: url(../images/icons/no-sun.svg);
+  background-image: url("../images/icons/no-sun.svg");
 }
 .plant-icon-high-sun {
-  background-image: url(../images/icons/high-sun.svg);
+  background-image: url("../images/icons/high-sun.svg");
 }
 .plant-icon-toxic {
-  background-image: url(../images/icons/toxic.svg);
+  background-image: url("../images/icons/toxic.svg");
 }
 .plant-icon-one-drop {
-  background-image: url(../images/icons/1-drop.svg);
+  width: 15px;
+  background-image: url("../images/icons/1-drop.svg");
 }
 .plant-icon-two-drops {
-  background-image: url(../images/icons/2-drops.svg);
+  width: 18px;
+  background-image: url("../images/icons/2-drops.svg");
 }
 .plant-icon-three-drops {
   width: 27px;
-  background-image: url(../images/icons/3-drops.svg);
+  background-image: url("../images/icons/3-drops.svg");
 }
 
 .gt-grid-plant-favorite {
@@ -105,7 +107,7 @@
     width: 189px;
     height: 43px;
     border-radius: 0 20px 20px 0;
-    background: $green-100 url(../images/illustrations/staff-favorite.png)
+    background: $green-100 url("../images/illustrations/staff-favorite.png")
       no-repeat 21px 6px;
     z-index: 1;
   }
@@ -143,6 +145,10 @@
   [class^="plant-icon-"] {
     width: 35px;
     height: 35px;
+  }
+
+  .plant-icon-one-drop {
+    width: 26px;
   }
 
   .plant-icon-three-drops {
