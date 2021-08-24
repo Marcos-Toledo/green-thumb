@@ -4,7 +4,20 @@
   border-radius: 19px;
   position: relative;
 
+  .gt-select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    transition: all 200ms;
+    z-index: 1;
+  }
+
   &.open {
+    .gt-select-arrow {
+      transform: translateY(-50%) rotate(-180deg);
+    }
+
     .gt-select-list {
       display: block;
     }
