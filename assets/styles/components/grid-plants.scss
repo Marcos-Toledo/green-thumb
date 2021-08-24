@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.2rem 1.7rem;
+  padding: 0 1rem;
+  max-width: 895px;
+  margin: 0 auto;
 }
 
 .gt-grid-plant-flag-favorite {
@@ -158,7 +161,7 @@
 
 @media (max-width: $tablet-width) {
   .gt-grid-plants {
-    width: 100vh;
+    padding: 0 2.3rem;
     overflow-x: auto;
     display: flex;
   }

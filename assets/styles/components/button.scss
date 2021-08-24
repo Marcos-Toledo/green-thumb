@@ -1,4 +1,4 @@
-.gt-btn-block {
+.gt-btn-block-outlined {
   color: $green-900;
   text-align: center;
   height: 50px;
@@ -6,8 +6,24 @@
   display: block;
   border: 1px solid $green-900;
   border-radius: 25px;
+  transition: all 200ms;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $green-900;
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  svg {
+    fill: $green-900;
+  }
 
   .gt-btn-arrow {
+    position: relative;
     vertical-align: text-bottom;
 
     &.gt-btn-arrow-right {

@@ -4,19 +4,6 @@
 
   .container {
     display: flex;
-
-    @media (max-width: $tablet-width) {
-      flex-direction: column;
-
-      [class^="gt-filter-"] {
-        max-width: 100%;
-
-        & + div[class^="gt-filter-"] {
-          margin-left: 0;
-          margin-top: 2rem;
-        }
-      }
-    }
   }
 
   [class^="gt-filter-"] {
@@ -54,5 +41,22 @@
     line-height: 1.3rem;
     word-spacing: -2px;
     letter-spacing: 1px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .gt-filter {
+    .container {
+      flex-direction: column;
+
+      [class^="gt-filter-"] {
+        max-width: 100%;
+
+        & + div[class^="gt-filter-"] {
+          margin-left: 0;
+          margin-top: 2rem;
+        }
+      }
+    }
   }
 }
