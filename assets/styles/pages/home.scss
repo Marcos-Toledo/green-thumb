@@ -1,12 +1,35 @@
 .gt-cover {
+  position: relative;
   padding: 7.8rem 0 7.54rem;
   background-color: $green-100;
-  background-image: url(../images/hero/desktop/left-leaves.png),
-    url(../images/hero/desktop/right-leaves.png),
-    url(../images/hero/desktop/plantperson.png);
-  background-position: 0% bottom, 100% bottom, 72.3% 49%;
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: contain, contain, 23%;
+  background-image: url("../images/hero/desktop/plantperson.png");
+  background-size: auto 90%;
+  background-position: 70% center;
+  background-repeat: no-repeat;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:before {
+    width: 55%;
+    background-image: url("../images/hero/desktop/left-leaves.png");
+    background-position: right;
+    left: 0px;
+  }
+
+  &:after {
+    width: 25%;
+    background-image: url("../images/hero/desktop/right-leaves.png");
+    background-position: left;
+    right: 0;
+  }
 }
 
 .gt-cover-title {
@@ -84,11 +107,23 @@
 @media (max-width: $tablet-width) {
   .gt-cover {
     min-height: 600px;
-    background-image: url(../images/hero/mobile/mobile-leaves.png),
-      url(../images/hero/mobile/mobile-plantperson.png);
-    background-position: left 150%, left bottom;
-    background-size: 100%, contain;
     padding: 7rem 0 7.54rem;
+    background-image: url("../images/hero/mobile/mobile-plantperson.png");
+    background-size: 80%;
+    background-position: center 90%;
+
+    &:before {
+      width: 100%;
+      background-image: url("../images/hero/mobile/mobile-leaves.png");
+      background-position: bottom;
+      background-size: cover;
+      top: -50%;
+      padding: 40px 0;
+    }
+
+    &:after {
+      display: none;
+    }
   }
 
   .gt-cover-title {
@@ -109,11 +144,5 @@
       align-self: center;
       margin-top: 3rem;
     }
-  }
-}
-
-@media (max-width: $tablet-width - 316px) {
-  .gt-cover {
-    background-position: left 0, left bottom;
   }
 }
